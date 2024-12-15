@@ -13,6 +13,10 @@
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="Activity" mc="Standard.Activity" uid="e2c5758a-e8b8-410c-8095-c32e984f9829"/>
+        <COMPID name="Interaction" mc="Standard.Interaction" uid="54ca3456-5ab2-42cd-8614-72208f1c5c30"/>
+      </COMP>
       <COMP relation="OwnedElement">
         <COMPID name="Micro" mc="Standard.Class" uid="7e7ce2ca-b209-4e76-a473-e71a4bfee4d2"/>
         <COMPID name="Système" mc="Standard.Class" uid="366503df-eeeb-4ea5-b1f8-231adfb414d8"/>

@@ -1,3 +1,5 @@
-#Sun Dec 15 20:46:57 CET 2024
+#Sun Dec 15 22:19:30 CET 2024
 org.modelio.app.diagram.editor.OpenedDiagrams0='projet_uml Class diagram' {8e04df99-fec1-44ae-a180-8e7dd2f7cece} Standard.ClassDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams3='projet_uml Sequence diagram' {0203635e-2820-451f-bb02-e474c9cbaf23} Standard.SequenceDiagram
 org.modelio.app.diagram.editor.OpenedDiagrams1='projet_uml Use Case diagram' {a7f03ae8-fb77-48e9-b978-1aae06009cf5} Standard.UseCaseDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams2='projet_uml Activity diagram' {2fe090f0-e8e7-4a70-8491-ccdd278b6274} Standard.ActivityDiagram
