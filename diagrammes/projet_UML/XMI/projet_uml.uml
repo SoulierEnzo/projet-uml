@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_7ZkNULrxEe-GBZMb9qpFvQ" name="projet_uml">
+  <eAnnotations xmi:id="_7ZkNUbrxEe-GBZMb9qpFvQ" source="Objing">
+    <contents xmi:type="uml:Property" xmi:id="_7ZkNUrrxEe-GBZMb9qpFvQ" name="exporterVersion">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_7ZkNU7rxEe-GBZMb9qpFvQ" value="3.0.0"/>
+    </contents>
+  </eAnnotations>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7ZkNVLrxEe-GBZMb9qpFvQ" name="Micro">
+    <ownedComment xmi:id="_7ZkNVbrxEe-GBZMb9qpFvQ">
+      <body>Classe modelisant un micro du système</body>
+    </ownedComment>
+    <ownedAttribute xmi:id="_7ZkNVrrxEe-GBZMb9qpFvQ" name="volume" visibility="private" isUnique="false">
+      <ownedComment xmi:id="_7ZkNV7rxEe-GBZMb9qpFvQ">
+        <body>Volume du microphone en %, de 1 a 100</body>
+      </ownedComment>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_7ZkNWLrxEe-GBZMb9qpFvQ" name="actif" visibility="private" isUnique="false">
+      <ownedComment xmi:id="_7ZkNWbrxEe-GBZMb9qpFvQ">
+        <body>Etat de l'écoute du micro ( actif / innactif )</body>
+      </ownedComment>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_7ZkNWrrxEe-GBZMb9qpFvQ" name="setActif" visibility="public">
+      <ownedComment xmi:id="_7ZkNW7rxEe-GBZMb9qpFvQ">
+        <body>setter de l'attribut Actif
+pour activer / desactiver le micro</body>
+      </ownedComment>
+      <ownedParameter xmi:id="_7ZkNXLrxEe-GBZMb9qpFvQ" name="etat" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7ZkNXbrxEe-GBZMb9qpFvQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7ZkNXrrxEe-GBZMb9qpFvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_7ZkNX7rxEe-GBZMb9qpFvQ" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_7ZkNYLrxEe-GBZMb9qpFvQ" name="setVolume" visibility="public">
+      <ownedComment xmi:id="_7ZkNYbrxEe-GBZMb9qpFvQ">
+        <body>setter du volume du micro</body>
+      </ownedComment>
+      <ownedParameter xmi:id="_7ZkNYrrxEe-GBZMb9qpFvQ" name="volume" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7ZkNY7rxEe-GBZMb9qpFvQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7ZkNZLrxEe-GBZMb9qpFvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_7ZkNZbrxEe-GBZMb9qpFvQ" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_7ZkNZrrxEe-GBZMb9qpFvQ" name="envoie_flux" visibility="public">
+      <ownedComment xmi:id="_7ZkNZ7rxEe-GBZMb9qpFvQ">
+        <body>Renvoie le flux audio capturé par le micro dans unbuffer
+</body>
+      </ownedComment>
+      <ownedParameter xmi:id="_7ZkNaLrxEe-GBZMb9qpFvQ" isUnique="false" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7ZkNabrxEe-GBZMb9qpFvQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7ZkNarrxEe-GBZMb9qpFvQ"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_7ZkNa7rxEe-GBZMb9qpFvQ" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7ZkNbLrxEe-GBZMb9qpFvQ" name="Système">
+    <ownedComment xmi:id="_7ZkNbbrxEe-GBZMb9qpFvQ">
+      <body></body>
+    </ownedComment>
+    <ownedAttribute xmi:id="_7ZkNbrrxEe-GBZMb9qpFvQ" name="micro" visibility="public" type="_7ZkNVLrxEe-GBZMb9qpFvQ" isUnique="false" aggregation="composite" association="_7ZkNhLrxEe-GBZMb9qpFvQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7ZkNb7rxEe-GBZMb9qpFvQ"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_7ZkNcLrxEe-GBZMb9qpFvQ" name="affichage" visibility="public" type="_7ZkNjLrxEe-GBZMb9qpFvQ" isUnique="false" aggregation="composite" association="_7ZkNhrrxEe-GBZMb9qpFvQ"/>
+    <ownedAttribute xmi:id="_7ZkNcbrxEe-GBZMb9qpFvQ" name="transcripteur" visibility="public" type="_7ZkNsrrxEe-GBZMb9qpFvQ" isUnique="false" aggregation="composite" association="_7ZkNiLrxEe-GBZMb9qpFvQ"/>
+    <ownedAttribute xmi:id="_7ZkNcrrxEe-GBZMb9qpFvQ" name="alerteur" visibility="public" type="_7ZkNlLrxEe-GBZMb9qpFvQ" isUnique="false" aggregation="composite" association="_7ZkNirrxEe-GBZMb9qpFvQ"/>
+    <ownedOperation xmi:id="_7ZkNc7rxEe-GBZMb9qpFvQ" name="traitement_flux" visibility="public">
+      <ownedComment xmi:id="_7ZkNdLrxEe-GBZMb9qpFvQ">
+        <body>méthode en charge du traitement audio du micro, appelle la classe Traducteur ou Alerte en fonction du flux traité </body>
+      </ownedComment>
+      <ownedParameter xmi:id="_7ZkNdbrxEe-GBZMb9qpFvQ" name="flux" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7ZkNdrrxEe-GBZMb9qpFvQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7ZkNd7rxEe-GBZMb9qpFvQ"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_7ZkNeLrxEe-GBZMb9qpFvQ" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_7ZkNebrxEe-GBZMb9qpFvQ" name="basculer_micro" visibility="public">
+      <ownedParameter xmi:id="_7ZkNerrxEe-GBZMb9qpFvQ" name="micro" type="_7ZkNVLrxEe-GBZMb9qpFvQ" isUnique="false">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7ZkNe7rxEe-GBZMb9qpFvQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7ZkNfLrxEe-GBZMb9qpFvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_7ZkNfbrxEe-GBZMb9qpFvQ" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_7ZkNfrrxEe-GBZMb9qpFvQ" name="ajuster_volume" visibility="public">
+      <ownedComment xmi:id="_7ZkNf7rxEe-GBZMb9qpFvQ">
+        <body>Ajuste le volume du micro selectionné</body>
+      </ownedComment>
+      <ownedParameter xmi:id="_7ZkNgLrxEe-GBZMb9qpFvQ" name="micro" type="_7ZkNVLrxEe-GBZMb9qpFvQ" isUnique="false">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7ZkNgbrxEe-GBZMb9qpFvQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7ZkNgrrxEe-GBZMb9qpFvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_7ZkNg7rxEe-GBZMb9qpFvQ" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_7ZkNhLrxEe-GBZMb9qpFvQ" memberEnd="_7ZkNbrrxEe-GBZMb9qpFvQ _7ZkNhbrxEe-GBZMb9qpFvQ">
+    <ownedEnd xmi:id="_7ZkNhbrxEe-GBZMb9qpFvQ" visibility="public" type="_7ZkNbLrxEe-GBZMb9qpFvQ" isUnique="false" association="_7ZkNhLrxEe-GBZMb9qpFvQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_7ZkNhrrxEe-GBZMb9qpFvQ" memberEnd="_7ZkNcLrxEe-GBZMb9qpFvQ _7ZkNh7rxEe-GBZMb9qpFvQ">
+    <ownedEnd xmi:id="_7ZkNh7rxEe-GBZMb9qpFvQ" visibility="public" type="_7ZkNbLrxEe-GBZMb9qpFvQ" isUnique="false" association="_7ZkNhrrxEe-GBZMb9qpFvQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_7ZkNiLrxEe-GBZMb9qpFvQ" memberEnd="_7ZkNcbrxEe-GBZMb9qpFvQ _7ZkNibrxEe-GBZMb9qpFvQ">
+    <ownedEnd xmi:id="_7ZkNibrxEe-GBZMb9qpFvQ" visibility="public" type="_7ZkNbLrxEe-GBZMb9qpFvQ" isUnique="false" association="_7ZkNiLrxEe-GBZMb9qpFvQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_7ZkNirrxEe-GBZMb9qpFvQ" memberEnd="_7ZkNcrrxEe-GBZMb9qpFvQ _7ZkNi7rxEe-GBZMb9qpFvQ">
+    <ownedEnd xmi:id="_7ZkNi7rxEe-GBZMb9qpFvQ" visibility="public" type="_7ZkNbLrxEe-GBZMb9qpFvQ" isUnique="false" association="_7ZkNirrxEe-GBZMb9qpFvQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7ZkNjLrxEe-GBZMb9qpFvQ" name="Affichage">
+    <ownedComment xmi:id="_7ZkNjbrxEe-GBZMb9qpFvQ">
+      <body>Classe en charge de l'affichage</body>
+    </ownedComment>
+    <ownedOperation xmi:id="_7ZkNjrrxEe-GBZMb9qpFvQ" name="afficher" visibility="public">
+      <ownedComment xmi:id="_7ZkNj7rxEe-GBZMb9qpFvQ">
+        <body>Module en charge de l'affichage a l'écran des informations qui lui sont transmises</body>
+      </ownedComment>
+      <ownedParameter xmi:id="_7ZkNkLrxEe-GBZMb9qpFvQ" name="donnees" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7ZkNkbrxEe-GBZMb9qpFvQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7ZkNkrrxEe-GBZMb9qpFvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_7ZkNk7rxEe-GBZMb9qpFvQ" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7ZkNlLrxEe-GBZMb9qpFvQ" name="Alerteur">
+    <ownedComment xmi:id="_7ZkNlbrxEe-GBZMb9qpFvQ">
+      <body>Classe chargée d'analyser le flux et d'agir suivant l'alerte détectée (appel, alarme)
+</body>
+    </ownedComment>
+    <ownedOperation xmi:id="_7ZkNlrrxEe-GBZMb9qpFvQ" name="identifier" visibility="public">
+      <ownedComment xmi:id="_7ZkNl7rxEe-GBZMb9qpFvQ">
+        <body>Identifie le type d'alerte dans le flux et retourne l'enum correspondant à l'alerte</body>
+      </ownedComment>
+      <ownedParameter xmi:id="_7ZkNmLrxEe-GBZMb9qpFvQ" name="flux" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7ZkNmbrxEe-GBZMb9qpFvQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7ZkNmrrxEe-GBZMb9qpFvQ"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_7ZkNm7rxEe-GBZMb9qpFvQ" value=""/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_7ZkNnLrxEe-GBZMb9qpFvQ" type="_7ZkNqbrxEe-GBZMb9qpFvQ" isUnique="false" direction="return">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7ZkNnbrxEe-GBZMb9qpFvQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7ZkNnrrxEe-GBZMb9qpFvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_7ZkNn7rxEe-GBZMb9qpFvQ" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_7ZkNoLrxEe-GBZMb9qpFvQ" name="alerter" visibility="public">
+      <ownedParameter xmi:id="_7ZkNobrxEe-GBZMb9qpFvQ" name="alerte" type="_7ZkNqbrxEe-GBZMb9qpFvQ" isUnique="false">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7ZkNorrxEe-GBZMb9qpFvQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7ZkNo7rxEe-GBZMb9qpFvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_7ZkNpLrxEe-GBZMb9qpFvQ" value=""/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_7ZkNpbrxEe-GBZMb9qpFvQ" isUnique="false" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7ZkNprrxEe-GBZMb9qpFvQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7ZkNp7rxEe-GBZMb9qpFvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_7ZkNqLrxEe-GBZMb9qpFvQ" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_7ZkNqbrxEe-GBZMb9qpFvQ" name="Alerte">
+    <ownedComment xmi:id="_7ZkNqrrxEe-GBZMb9qpFvQ">
+      <body>Enumeration des différentes alertes possible : Appel de son nom, Alarme (ex: incendie)</body>
+    </ownedComment>
+    <ownedAttribute xmi:id="_7ZkNq7rxEe-GBZMb9qpFvQ" name="alerteur" visibility="public" type="_7ZkNlLrxEe-GBZMb9qpFvQ" isUnique="false" association="_7ZkNr7rxEe-GBZMb9qpFvQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7ZkNrLrxEe-GBZMb9qpFvQ"/>
+    </ownedAttribute>
+    <ownedLiteral xmi:id="_7ZkNrbrxEe-GBZMb9qpFvQ" name="Nom"/>
+    <ownedLiteral xmi:id="_7ZkNrrrxEe-GBZMb9qpFvQ" name="Alarme"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_7ZkNr7rxEe-GBZMb9qpFvQ" memberEnd="_7ZkNq7rxEe-GBZMb9qpFvQ _7ZkNsLrxEe-GBZMb9qpFvQ">
+    <ownedEnd xmi:id="_7ZkNsLrxEe-GBZMb9qpFvQ" visibility="public" type="_7ZkNqbrxEe-GBZMb9qpFvQ" isUnique="false" association="_7ZkNr7rxEe-GBZMb9qpFvQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7ZkNsbrxEe-GBZMb9qpFvQ"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7ZkNsrrxEe-GBZMb9qpFvQ" name="Transcripteur">
+    <ownedComment xmi:id="_7ZkNs7rxEe-GBZMb9qpFvQ">
+      <body>Classe en charge de réaliser une transcription speech to text</body>
+    </ownedComment>
+    <ownedOperation xmi:id="_7ZkNtLrxEe-GBZMb9qpFvQ" name="traduire" visibility="public">
+      <ownedComment xmi:id="_7ZkNtbrxEe-GBZMb9qpFvQ">
+        <body>Methode de speech to text</body>
+      </ownedComment>
+      <ownedParameter xmi:id="_7ZkNtrrxEe-GBZMb9qpFvQ" name="flux" isUnique="false">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EByte"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7ZkNt7rxEe-GBZMb9qpFvQ" value="*"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7ZkNuLrxEe-GBZMb9qpFvQ"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_7ZkNubrxEe-GBZMb9qpFvQ" value=""/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_7ZkNurrxEe-GBZMb9qpFvQ" isUnique="false" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7ZkNu7rxEe-GBZMb9qpFvQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7ZkNvLrxEe-GBZMb9qpFvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_7ZkNvbrxEe-GBZMb9qpFvQ" value=""/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+</uml:Model>

@@ -1,0 +1,146 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="projet_uml" version="4">
+  <OBJECT>
+    <ID name="projet_uml" mc="Standard.Package" uid="76ee23de-c54b-4636-85c2-30fc84ac21b2"/>
+    <PID name="projet_UML" mc="Standard.Project" uid="eab431a9-05c1-4e04-9006-c9b15909df5e"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[projet_uml]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Micro" mc="Standard.Class" uid="7e7ce2ca-b209-4e76-a473-e71a4bfee4d2"/>
+        <COMPID name="Système" mc="Standard.Class" uid="366503df-eeeb-4ea5-b1f8-231adfb414d8"/>
+        <COMPID name="Affichage" mc="Standard.Class" uid="bf618a0c-b5a6-40d3-b015-d7c75449a00a"/>
+        <COMPID name="Alerteur" mc="Standard.Class" uid="b54df7a5-9902-4c06-b9fb-fbb37120eb9e"/>
+        <OBJECT>
+          <ID name="Alerte" mc="Standard.Enumeration" uid="46510028-f823-4525-8af0-679087f85b81"/>
+          <ATTRIBUTES>
+            <ATT name="IsElementary">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[Alerte]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Value">
+              <OBJECT>
+                <ID name="Nom" mc="Standard.EnumerationLiteral" uid="2e939cef-a45f-45ee-87d5-9892ded30667"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Nom]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Alarme" mc="Standard.EnumerationLiteral" uid="cfa8848a-fd34-4f1f-9977-598876e81e7e"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Alarme]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="OwnedEnd">
+              <OBJECT>
+                <ID name="alerteur" mc="Standard.AssociationEnd" uid="7343670b-8b36-4d58-8a2d-3f95ad2a7482"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">AccesNone</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"><![CDATA[alerteur]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <ID name="Alerteur" mc="Standard.Class" uid="b54df7a5-9902-4c06-b9fb-fbb37120eb9e"/>
+                  </LINK>
+                  <COMP relation="Opposite">
+                    <OBJECT>
+                      <ID name="" mc="Standard.AssociationEnd" uid="ff2e0928-646a-4954-b6c3-96bdfb950c38"/>
+                      <ATTRIBUTES>
+                        <ATT name="Aggregation">KindIsAssociation</ATT>
+                        <ATT name="IsChangeable">true</ATT>
+                        <ATT name="Changeable">AccesNone</ATT>
+                        <ATT name="IsDerived">false</ATT>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="Visibility">Public</ATT>
+                        <ATT name="IsClass">false</ATT>
+                        <ATT name="IsAbstract">false</ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="Opposite">
+                          <COMPID name="alerteur" mc="Standard.AssociationEnd" uid="7343670b-8b36-4d58-8a2d-3f95ad2a7482"/>
+                        </COMP>
+                        <COMP relation="Association">
+                          <OBJECT>
+                            <ID name="" mc="Standard.Association" uid="cae6733b-5ac8-40fc-afce-06de6198be8f"/>
+                            <ATTRIBUTES>
+                              <ATT name="Name"></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES></DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="Association">
+                    <COMPID name="" mc="Standard.Association" uid="cae6733b-5ac8-40fc-afce-06de6198be8f"/>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="3883e507-f4cd-442e-ae58-d271eef43787"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[Enumeration des différentes alertes possible : Appel de son nom, Alarme (ex: incendie)]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <COMPID name="Transcripteur" mc="Standard.Class" uid="6a42526a-f7ad-4ec7-888c-60797b493599"/>
+        <COMPID name="Utilisateur" mc="Standard.Actor" uid="1990d3e0-8a58-4560-b8a6-185182fb2ef4"/>
+        <COMPID name="Augmenter ou diminuer la détection du son " mc="Standard.UseCase" uid="3e8d3687-e8b9-4fec-8a18-c208fa16fb7a"/>
+        <COMPID name="Recevoir la transcription" mc="Standard.UseCase" uid="ded0b283-525b-4e04-b6cd-9b04036d9f63"/>
+        <COMPID name="Recevoir l'alerte" mc="Standard.UseCase" uid="bac6d3d1-2925-48c3-a5be-56533e88d8ec"/>
+        <COMPID name="Activer / Désactiver un micro" mc="Standard.UseCase" uid="abf50d22-fd3e-4f56-8573-48a3e7456462"/>
+        <COMPID name="Stopper la réception" mc="Standard.UseCase" uid="18d4ca6c-2ef0-45af-bfe3-8f56b5571ddf"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="projet_uml Class diagram" mc="Standard.ClassDiagram" uid="8e04df99-fec1-44ae-a180-8e7dd2f7cece"/>
+        <COMPID name="projet_uml Use Case diagram" mc="Standard.UseCaseDiagram" uid="a7f03ae8-fb77-48e9-b978-1aae06009cf5"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
